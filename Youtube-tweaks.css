@@ -1,0 +1,71 @@
+@-moz-document domain("youtube.com") {
+
+/* Change color of YouTube left sidebar section titles */
+ytd-guide-section-renderer #header,
+ytd-guide-section-renderer #header .title,
+ytd-guide-section-renderer .guide-section-title,
+ytd-guide-section-renderer .style-scope.ytd-guide-section-renderer,
+ytd-guide-section-renderer .title.style-scope.ytd-guide-section-renderer,
+ytd-guide-section-renderer #header .style-scope.ytd-guide-section-renderer,
+ytd-guide-section-renderer #header .title.style-scope.ytd-guide-section-renderer {
+    color: #d80202 !important;
+    font-weight: bold;
+}
+
+/* For some newer YouTube layouts */
+#guide-content ytd-guide-section-renderer #header,
+#guide-content ytd-guide-section-renderer #header .title {
+    color: #d80202 !important;
+    font-weight: bold;
+}
+    
+/* Make video thumbnails a bit smaller on the homepage */
+ytd-rich-item-renderer {
+    --ytd-rich-grid-item-margin: 8px;
+    max-width: 260px !important;
+    flex: 0 0 260px !important;
+    padding: 8px 4px !important; /* Add vertical and horizontal padding */
+    box-sizing: border-box !important;
+}
+
+ytd-rich-item-renderer #thumbnail.ytd-thumbnail,
+ytd-rich-item-renderer ytd-thumbnail {
+    width: 250px !important;
+    height: 135px !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    display: block;
+    margin: 0 auto;
+}
+
+/*  Adjust YouTube Shorts Shelf */
+
+ytd-rich-shelf-renderer[is-shorts] #contents > ytd-rich-item-renderer {
+    max-width: 200px !important;
+    width: auto !important;
+    margin-left: 4px !important; 
+    margin-right: 4px !important;
+}        
+
+/* Make shelf container width fit content (Remove blank space). */
+    ytd-rich-shelf-renderer[is-shorts] {
+        width: max-content !important; 
+        max-width: 100% !important;
+}
+
+/* Align items left within the shelf's content area.*/
+    ytd-rich-shelf-renderer[is-shorts] #contents {
+    justify-content: flex-start !important;
+}
+
+/* Adjust Shorts title font size.*/
+    ytd-rich-shelf-renderer[is-shorts] #video-title {
+    font-size: 1.3rem !important; line-height: 1.8rem !important;
+}        
+
+/* Adjust Shorts metadata (views) font size.*/
+    ytd-rich-shelf-renderer[is-shorts] #metadata-line {
+    font-size: 1.1rem !important; line-height: 1.5rem !important;
+}
+    
+}
