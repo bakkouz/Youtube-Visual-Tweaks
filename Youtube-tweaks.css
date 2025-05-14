@@ -12,6 +12,7 @@ ytd-guide-section-renderer #header .title.style-scope.ytd-guide-section-renderer
     font-weight: bold;
 }
 
+
 /* For some newer YouTube layouts */
 #guide-content ytd-guide-section-renderer #header,
 #guide-content ytd-guide-section-renderer #header .title {
@@ -47,6 +48,12 @@ ytd-rich-shelf-renderer[is-shorts] #contents > ytd-rich-item-renderer {
     margin-right: 4px !important;
 }        
 
+    /* Make video thumbnails a bit smaller on the search page */
+#dismissible.ytd-video-renderer {
+    max-width: 60% !important;
+}
+    
+    
 /* Make shelf container width fit content (Remove blank space). */
     ytd-rich-shelf-renderer[is-shorts] {
         width: max-content !important; 
@@ -69,3 +76,4 @@ ytd-rich-shelf-renderer[is-shorts] #contents > ytd-rich-item-renderer {
 }
     
 }
+Reviews
